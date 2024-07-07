@@ -4,22 +4,28 @@ import App from './App.jsx';
 import './index.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import SignInPage from '@/auth/sign-in/SignInPage.jsx';
-import Home from '@/pages/Home.jsx';
-import Dashboard from '@/pages/Dashboard.jsx';
+import { ClerkProvider } from '@clerk/clerk-react';
+import { Home, Dashboard, EditResume } from '@/pages/index.js';
+
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
 const router = createBrowserRouter([
 	{
 		element: <App />,
-    children: [
-      {
-        path: '/',
-        element: <Home />,
-      },
-      {
-        path: '/dashboard',
-        element: <Dashboard/>
-      }
-    ]
+		children: [
+			{
+				path: '/dashboard',
+				element: <Dashboard />,
+			},
+			{
+				path: '/dashboard/resume/:resumeId/edit',
+				element: <EditResume />,
+			},
+		],
+	},
+	{
+		path: '/',
+		element: <Home />,
 	},
 	{
 		path: '/auth/sign-in',
@@ -29,8 +35,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>
-		<RouterProvider router={router}>
-			<App />
-		</RouterProvider>
+		<ClerkProvider publishableKey={PUBLISHABLE_KEY}>
+			<RouterProvider router={router} />
+		</ClerkProvider>
 	</React.StrictMode>
 );

@@ -24,7 +24,7 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          DEFAULT: "#9f5bff",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
@@ -56,6 +56,11 @@ module.exports = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      fontSize: {
+        "xs": "8px",
+        "sm": "10px",
+        "base": "11px",
       },
       keyframes: {
         "accordion-down": {
