@@ -8,11 +8,11 @@
 	}
 
 	.section-title{
-		@apply font-bold text-sm leading-normal lg:text-[14px];
+		@apply font-bold text-sm leading-normal;
 	}
 
 	.section-body{
-		@apply text-xs lg:text-base;
+		@apply text-xs;
 	}
 
 	:root {
