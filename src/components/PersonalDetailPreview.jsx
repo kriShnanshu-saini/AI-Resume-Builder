@@ -28,7 +28,6 @@ const PersonalDetailPreview = ({ resumeInfo }) => {
 					</a>
 				</li>
 			</ul>
-			<hr className='divider' />
 		</div>
 	);
 };

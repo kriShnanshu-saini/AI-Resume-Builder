@@ -1,11 +1,11 @@
+import { Section } from '@/components';
+
 /* eslint-disable react/prop-types */
 const SummaryPreview = ({ resumeInfo }) => {
 	return (
-		<div>
-			<h2 className='section-title'>Summary</h2>
-			<p className='section-body'>{resumeInfo?.summary}</p>
-			<hr className="divider" />
-		</div>
+		<Section title={'Summary'}>
+			<p>{resumeInfo?.summary}</p>
+		</Section>
 	);
 };
 

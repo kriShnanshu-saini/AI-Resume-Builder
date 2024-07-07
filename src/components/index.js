@@ -9,3 +9,6 @@ export { default as ExperiencePreview } from './ExperiencePreview';
 export { default as EducationPreview } from './EducationPreview';
 export { default as SkillsPreview } from './SkillsPreview';
 export { default as ProjectsPreview } from './ProjectsPreview';
+
+// utils
+export { default as Section } from './Section';

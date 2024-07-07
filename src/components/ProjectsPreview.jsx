@@ -1,9 +1,9 @@
+import { Section } from '@/components';
+
 /* eslint-disable react/prop-types */
 const ProjectsPreview = ({ resumeInfo }) => {
 	return (
-		<div>
-			<h3 className='section-title'>Projects</h3>
-
+		<Section title='Projects'>
 			{resumeInfo?.projects?.map(project => (
 				<li
 					key={project.id}
@@ -22,9 +22,7 @@ const ProjectsPreview = ({ resumeInfo }) => {
 					</div>
 				</li>
 			))}
-
-			<hr className='divider' />
-		</div>
+		</Section>
 	);
 };
 

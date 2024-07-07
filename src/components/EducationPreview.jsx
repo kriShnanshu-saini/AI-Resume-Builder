@@ -1,10 +1,10 @@
+import { Section } from '@/components';
 import { Dot } from 'lucide-react';
 
 /* eslint-disable react/prop-types */
 const EducationPreview = ({ resumeInfo }) => {
 	return (
-		<div>
-			<h3 className='section-title'>Education</h3>
+		<Section title='Education'>
 			<ul>
 				{resumeInfo?.education?.map(edu => (
 					<li
@@ -24,8 +24,7 @@ const EducationPreview = ({ resumeInfo }) => {
 				))}
 			</ul>
 
-			<hr className='divider' />
-		</div>
+		</Section>
 	);
 };
 

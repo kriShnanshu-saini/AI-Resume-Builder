@@ -1,15 +1,15 @@
+import { Section } from '@/components';
 import { Dot } from 'lucide-react';
 
 /* eslint-disable react/prop-types */
 const ExperiencePreview = ({ resumeInfo }) => {
 	return (
-		<div>
-			<h3 className='section-title'>Experience</h3>
+		<Section title='Experience'>
 			<ul>
 				{resumeInfo?.experience?.map(exp => (
 					<li
 						key={exp.id}
-						className='section-body mt-3 first:mt-2 grid grid-rows-[min-content_auto] '>
+						className='section-body mt-3 first:mt-0 grid grid-rows-[min-content_auto] '>
 						<div className='font-semibold inline-flex items-center justify-between '>
 							<h3 className='inline-flex items-center'>
 								<Dot /> {exp.title}
@@ -25,9 +25,7 @@ const ExperiencePreview = ({ resumeInfo }) => {
 					</li>
 				))}
 			</ul>
-
-			<hr className='divider' />
-		</div>
+		</Section>
 	);
 };
 
