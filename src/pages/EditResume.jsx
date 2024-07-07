@@ -7,6 +7,7 @@ const EditResume = () => {
 	const [resumeInfo, setResumeInfo] = useState(null);
 
 	useEffect(() => {
+		
 		setResumeInfo(resumeDummyData);
 		console.log('🚀 ~ EditResume ~ resumeInfo:', resumeInfo);
 	}, []);

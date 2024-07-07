@@ -22,6 +22,18 @@ const AddResume = () => {
 			title: resumeTitle,
 			user_email: user?.primaryEmailAddress?.emailAddress,
 			user_name: user?.fullName,
+			first_name: '',
+			last_name: '',
+			job_title: '',
+			phone: '',
+			email: '',
+			github: '',
+			linkedin: '',
+			summary: '',
+			experience: [],
+			education: [],
+			skills: [],
+			projects: [],
 		};
 		setLoading(true);
 		try {

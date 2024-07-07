@@ -4,10 +4,10 @@ import { Github, Linkedin } from 'lucide-react';
 const PersonalDetailPreview = ({ resumeInfo }) => {
 	return (
 		<div>
-			<h2 className='font-bold text-lg lg:text-xl text-center '>
-				{resumeInfo?.firstName} {resumeInfo?.lastName}
+			<h2 className='font-bold text-lg lg:text-xl text-center capitalize '>
+				{resumeInfo?.first_name} {resumeInfo?.last_name}
 			</h2>
-			<h2 className='capitalize text-center text-sm lg:text-base font-medium '> {resumeInfo?.jobTitle} </h2>
+			<h2 className='capitalize text-center text-sm lg:text-base font-medium '> {resumeInfo?.job_title} </h2>
 			<ul className='flex flex-wrap justify-center items-center gap-x-4 text-sm mt-2 '>
 				<li className='border-r border-black/75 pr-4 last:border-0 last:pr-0'> {resumeInfo?.phone} </li>
 				<li className='border-r border-black/75 pr-4 last:border-0 last:pr-0'> {resumeInfo?.email} </li>

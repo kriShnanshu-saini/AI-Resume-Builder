@@ -8,7 +8,7 @@
 	}
 
 	.section-title{
-		@apply font-bold text-sm leading-normal;
+		@apply font-bold text-sm leading-normal ;
 	}
 
 	.section-body{

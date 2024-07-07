@@ -1,7 +1,7 @@
 export const resumeDummyData = {
-	firstName: 'James',
-	lastName: 'Carter',
-	jobTitle: 'full stack developer',
+	first_name: 'James',
+	last_name: 'Carter',
+	job_title: 'full stack developer',
 	address: '525 N tryon Street, NC 28117',
 	phone: '+91 7027285417',
 	email: 'jamescarter@gmail.com',
