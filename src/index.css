@@ -7,11 +7,11 @@
 		@apply mt-1 mb-2 border-black border-[1px];
 	}
 
-	.section-title{
-		@apply font-bold text-sm leading-normal ;
+	.section-title {
+		@apply font-bold text-sm leading-normal;
 	}
 
-	.section-body{
+	.section-body {
 		@apply text-xs;
 	}
 
@@ -85,4 +85,14 @@
 	body {
 		@apply bg-background text-foreground;
 	}
+}
+
+/* Rich text editor bullets issue */
+.rsw-ce ul {
+	list-style: disc;
+	padding-left: 2em;
+}
+.rsw-ce ol {
+	list-style: decimal;
+	padding-left: 2em;
 }

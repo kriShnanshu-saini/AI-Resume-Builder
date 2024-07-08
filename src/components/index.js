@@ -15,8 +15,10 @@ export { default as ProjectsPreview } from './ProjectsPreview';
 // Resume Form
 export { default as PersonalDetailForm } from './PersonalDetailForm';
 export { default as SummaryForm } from './SummaryForm';
+export { default as ExperienceForm } from './ExperienceForm';
 
 
 // utils
 export { default as Section } from './Section';
 export { default as FormSection } from './FormSection';
+export { default as RichTextEditor } from './RichTextEditor';

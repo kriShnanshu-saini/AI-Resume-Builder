@@ -1,12 +1,17 @@
-import { PersonalDetailForm, SummaryForm } from '@/components';
+import { ExperienceForm, PersonalDetailForm, SummaryForm } from '@/components';
 import { Button } from '@/components/ui/button';
 import { LayoutGrid } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { toast } from 'sonner';
 
 const ResumeForm = () => {
-	const [activeFormIndex, setActiveFormIndex] = useState(1);
+	const [activeFormIndex, setActiveFormIndex] = useState(2);
     const [enableNext, setEnableNext] = useState(false);
 	
+	useEffect(() => {
+		toast(activeFormIndex);
+	}, [activeFormIndex])
+
 	return (
 		<div>
 			<div className='flex justify-between items-center'>
@@ -26,6 +31,7 @@ const ResumeForm = () => {
 			{/* summary */}
 			{activeFormIndex === 1 && <SummaryForm enabledNext={v => setEnableNext(v)} />}
 			{/* experience */}
+			{activeFormIndex === 2 && <ExperienceForm enabledNext={v => setEnableNext(v)} />}
 			{/* education */}
 			{/* projects */}
 			{/* skills */}
