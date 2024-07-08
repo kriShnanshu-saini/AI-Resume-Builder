@@ -1,3 +1,4 @@
+import { FormSection } from '@/components';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -35,7 +36,10 @@ const PersonalDetailForm = ({ enabledNext }) => {
 
 		// updating data in supabase
 		const { data, error } = await client.from('user_resumes').update(formData).eq('id', resumeId).select();
-		if (error) return console.error(error);
+		if (error) {
+			console.error(error);
+			toast.error('Some error occurred!')
+		}
 		data && toast.success('Personal details updated!');
 
 		enabledNext(true);
@@ -43,10 +47,9 @@ const PersonalDetailForm = ({ enabledNext }) => {
 	};
 
 	return (
-		<div className='p-5 shadow-lg rounded0lg border-t-primary border-t-4 mt-10'>
-			<h2 className='font-bold text-lg '>Personal Details</h2>
-			<p>Get started with your basic details</p>
-
+		<FormSection
+			title='Personal Details'
+			subtitle='Get started with your basic details'>
 			<form onSubmit={onSave}>
 				<div className='grid grid-cols-2 mt-5 gap-3'>
 					<div>
@@ -161,7 +164,7 @@ const PersonalDetailForm = ({ enabledNext }) => {
 					</Button>
 				</div>
 			</form>
-		</div>
+		</FormSection>
 	);
 };
 

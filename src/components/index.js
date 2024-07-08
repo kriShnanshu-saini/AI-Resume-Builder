@@ -14,7 +14,9 @@ export { default as ProjectsPreview } from './ProjectsPreview';
 
 // Resume Form
 export { default as PersonalDetailForm } from './PersonalDetailForm';
+export { default as SummaryForm } from './SummaryForm';
 
 
 // utils
 export { default as Section } from './Section';
+export { default as FormSection } from './FormSection';

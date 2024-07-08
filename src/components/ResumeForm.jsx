@@ -1,10 +1,10 @@
-import { PersonalDetailForm } from '@/components';
+import { PersonalDetailForm, SummaryForm } from '@/components';
 import { Button } from '@/components/ui/button';
 import { LayoutGrid } from 'lucide-react';
 import { useState } from 'react';
 
 const ResumeForm = () => {
-	const [activeFormIndex, setActiveFormIndex] = useState(0);
+	const [activeFormIndex, setActiveFormIndex] = useState(1);
     const [enableNext, setEnableNext] = useState(false);
 	
 	return (
@@ -24,6 +24,7 @@ const ResumeForm = () => {
 			{/* personal details */}
 			{activeFormIndex === 0 && <PersonalDetailForm enabledNext={v => setEnableNext(v)} />}
 			{/* summary */}
+			{activeFormIndex === 1 && <SummaryForm enabledNext={v => setEnableNext(v)} />}
 			{/* experience */}
 			{/* education */}
 			{/* projects */}

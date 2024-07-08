@@ -4,7 +4,7 @@ import { Section } from '@/components';
 const SummaryPreview = ({ resumeInfo }) => {
 	return (
 		<Section title={'Summary'}>
-			<p>{resumeInfo?.summary}</p>
+			<p className='normal-case '>{resumeInfo?.summary}</p>
 		</Section>
 	);
 };
